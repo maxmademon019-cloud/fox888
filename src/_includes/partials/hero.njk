@@ -1,0 +1,20 @@
+{% from "components/buttons.njk" import loginButton, registerButton with context %}
+{% set heading = landing.hero.heading %}
+<section class="container hero">
+  <div class="hero-card">
+    <span class="eyebrow">{{ landing.hero.eyebrow }}</span>
+    <h1><span class="h1-lead">{{ heading.emoji }} <span class="hl">{{ heading.highlight }}</span></span> {{ heading.text }}</h1>
+    <div class="chips">
+      {% for chip in landing.hero.chips %}
+        <a class="chip" href="#{{ chip.target }}">{{ chip.emoji }} {{ chip.label }}</a>
+      {% endfor %}
+    </div>
+    <div class="hero-cta">
+      {{ loginButton(ui.login) }}
+      {{ registerButton(ui.register) }}
+    </div>
+  </div>
+  <div class="hero-media">
+    <amp-img src="{{ site.heroImage.src }}" width="{{ site.heroImage.width }}" height="{{ site.heroImage.height }}" layout="responsive" alt="{{ site.heroImage.alt }}"></amp-img>
+  </div>
+</section>

@@ -1,0 +1,31 @@
+.games { display: grid; gap: 12px; margin: 0; padding: 0; list-style: none; }
+
+.games li {
+  padding: 18px;
+  border-radius: 16px;
+  font-weight: 300;
+  color: var(--text-body);
+  background:
+    radial-gradient(260px 120px at 100% 0%, rgba(45, 91, 255, .25), transparent 70%),
+    var(--surface-inset);
+  border: 1px solid var(--line-gold);
+}
+
+.games strong { display: block; margin-bottom: 2px; font-weight: 600; color: var(--text); }
+
+.game-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  margin-bottom: 10px;
+  border-radius: 14px;
+  font-size: 26px;
+  background: rgba(255, 195, 0, .10);
+  border: 1px solid var(--line-gold);
+}
+
+@media (min-width: 640px) {
+  .games { grid-template-columns: repeat(3, 1fr); }
+}

@@ -1,0 +1,8 @@
+<section class="container highlights" aria-label="{{ ui.highlightsLabel }}">
+  {% for item in landing.highlights %}
+    <div class="highlight">
+      <span class="highlight-icon">{% include "icons/" + item.icon + ".svg" %}</span>
+      <div><strong>{{ item.value }}</strong><span>{{ item.label }}</span></div>
+    </div>
+  {% endfor %}
+</section>

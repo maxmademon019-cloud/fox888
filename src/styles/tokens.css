@@ -1,0 +1,15 @@
+:root {
+  --bg: #060914;
+  --surface-inset: rgba(6, 9, 20, .55);
+  --line-gold: rgba(255, 195, 0, .22);
+  --line-blue: rgba(120, 150, 255, .20);
+  --gold: #ffc300;
+  --gold-light: #ffe07a;
+  --gold-deep: #e59f00;
+  --text: #eef1fa;
+  --text-body: #d3d9ee;
+  --muted: #9aa5c8;
+  --radius: 18px;
+  --gutter: 16px;
+  --header-offset: 116px;
+}

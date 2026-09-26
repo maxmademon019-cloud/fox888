@@ -1,0 +1,13 @@
+<!doctype html>
+<html ⚡ lang="{{ site.lang }}">
+  <head>
+    {% include "head/meta.njk" %}
+    {% include "head/assets.njk" %}
+    {% include "head/schema.njk" %}
+    <style amp-custom>{% inlineStyles %}</style>
+    {% include "head/boilerplate.njk" %}
+  </head>
+  <body>
+    {{ content | safe }}
+  </body>
+</html>

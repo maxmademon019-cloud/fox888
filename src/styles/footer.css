@@ -1,0 +1,30 @@
+.site-footer {
+  margin-top: 32px;
+  padding: 28px 0 24px;
+  border-top: 1px solid var(--line-gold);
+  background: rgba(6, 9, 20, .8);
+}
+
+.footer-inner { display: grid; gap: 16px; justify-items: center; text-align: center; }
+
+.footer-nav { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px 16px; }
+
+.footer-nav a { font-size: 14px; color: var(--muted); text-decoration: none; }
+
+.footer-nav a:hover { color: var(--gold-light); }
+
+.footer-note { display: flex; align-items: center; justify-content: center; margin: 0; font-size: 13px; color: var(--muted); }
+
+.age-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  margin-right: 8px;
+  border-radius: 50%;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--gold);
+  border: 2px solid var(--gold);
+}

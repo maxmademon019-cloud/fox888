@@ -1,0 +1,37 @@
+.aside { display: none; }
+
+.aside .card + .card { margin-top: 16px; }
+
+.card .toc-title { font-size: 16px; }
+
+.toc ol { margin: 0; padding: 0; list-style: none; counter-reset: toc; }
+
+.toc li { counter-increment: toc; border-top: 1px solid rgba(120, 150, 255, .12); }
+
+.toc li:first-child { border-top: 0; }
+
+.toc a {
+  display: flex;
+  gap: 10px;
+  padding: 10px 0;
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--text-body);
+  text-decoration: none;
+}
+
+.toc a::before { content: counter(toc, decimal-leading-zero); color: var(--gold); font-weight: 600; }
+
+.toc a:hover { color: var(--gold-light); }
+
+.aside-cta { text-align: center; }
+
+.aside-cta .brand-logo { width: 72px; margin: 4px auto 12px; }
+
+.aside-cta p { font-size: 15px; }
+
+.aside-cta .btn { width: 100%; margin-top: 10px; }
+
+@media (min-width: 1040px) {
+  .aside { display: block; position: sticky; top: 118px; }
+}

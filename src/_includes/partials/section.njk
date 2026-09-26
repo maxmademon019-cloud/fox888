@@ -1,0 +1,32 @@
+{% from "components/buttons.njk" import loginButton, registerButton with context %}
+<section class="card{% if section.cta %} card-cta{% endif %}" id="{{ section.id }}">
+  <h2>{{ section.title }}</h2>
+  {% for paragraph in section.paragraphs %}
+    <p>{{ paragraph }}</p>
+  {% endfor %}
+
+  {% if section.steps %}
+    <h3>{{ section.steps.title }}</h3>
+    <ol class="steps">
+      {% for step in section.steps.items %}
+        <li><strong>{{ step.title }}</strong>{{ step.text }}</li>
+      {% endfor %}
+    </ol>
+  {% endif %}
+
+  {% if section.games %}
+    <h3>{{ section.games.title }}</h3>
+    <ul class="games">
+      {% for game in section.games.items %}
+        <li><span class="game-icon" aria-hidden="true">{{ game.emoji }}</span><strong>{{ game.title }}</strong>{{ game.text }}</li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+
+  {% if section.cta %}
+    <div class="cta-row">
+      {{ loginButton(ui.login) }}
+      {{ registerButton(ui.register) }}
+    </div>
+  {% endif %}
+</section>

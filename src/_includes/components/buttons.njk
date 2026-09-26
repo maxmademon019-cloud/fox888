@@ -1,0 +1,7 @@
+{% macro loginButton(label, size="", icon="") -%}
+<a class="btn btn-outline{% if size %} btn-{{ size }}{% endif %} js-login" href="{{ site.links.login }}">{% if icon %}{% include "icons/" + icon + ".svg" %}{% endif %}{{ label }}</a>
+{%- endmacro %}
+
+{% macro registerButton(label, size="", icon="") -%}
+<a class="btn btn-gold{% if size %} btn-{{ size }}{% endif %} js-register" href="{{ site.links.register }}">{% if icon %}{% include "icons/" + icon + ".svg" %}{% endif %}{{ label }}</a>
+{%- endmacro %}

@@ -1,0 +1,11 @@
+<section class="card" id="{{ faq.id }}">
+  <h2>{{ faq.title }}</h2>
+  <amp-accordion class="faq-list" animate expand-single-section>
+    {% for item in faq.items %}
+      <section{% if loop.first %} expanded{% endif %}>
+        <h3>{{ item.question }}</h3>
+        <div><p>{{ item.answer }}</p></div>
+      </section>
+    {% endfor %}
+  </amp-accordion>
+</section>

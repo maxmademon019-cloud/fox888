@@ -1,0 +1,33 @@
+*, *::before, *::after { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; scroll-padding-top: var(--header-offset); }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  padding-bottom: 92px;
+  background-color: var(--bg);
+  background-image:
+    radial-gradient(900px 520px at 90% -8%, rgba(45, 91, 255, .30), transparent 62%),
+    radial-gradient(640px 420px at -12% 18%, rgba(255, 195, 0, .10), transparent 60%);
+  background-repeat: no-repeat;
+  color: var(--text);
+  font-family: 'Kanit', system-ui, -apple-system, 'Segoe UI', Tahoma, sans-serif;
+  font-weight: 400;
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: var(--gold-light); }
+
+:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
+
+.container { width: 100%; max-width: 1140px; margin: 0 auto; padding: 0 var(--gutter); }
+
+@media (min-width: 640px) {
+  :root { --gutter: 24px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}

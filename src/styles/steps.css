@@ -1,0 +1,30 @@
+.steps { display: grid; gap: 10px; margin: 0; padding: 0; list-style: none; counter-reset: step; }
+
+.steps li {
+  position: relative;
+  counter-increment: step;
+  padding: 14px 14px 14px 62px;
+  border-radius: 14px;
+  background: var(--surface-inset);
+  border: 1px solid var(--line-blue);
+  font-weight: 300;
+  color: var(--text-body);
+}
+
+.steps li::before {
+  content: counter(step);
+  position: absolute;
+  left: 14px;
+  top: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+  font-weight: 700;
+  color: #1b1300;
+  background: linear-gradient(180deg, var(--gold-light), var(--gold-deep));
+}
+
+.steps strong { display: block; margin-bottom: 2px; font-weight: 600; color: var(--text); }

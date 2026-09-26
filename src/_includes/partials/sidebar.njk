@@ -1,0 +1,12 @@
+<amp-sidebar id="menu" class="sidebar" layout="nodisplay" side="right">
+  <div class="sidebar-head">
+    {% include "components/brand-name.njk" %}
+    <button class="sidebar-close" on="tap:menu.close" aria-label="{{ ui.closeMenu }}">×</button>
+  </div>
+  <nav aria-label="{{ ui.mobileNav }}">
+    {% for item in nav %}
+      <a href="#{{ item.id }}" on="tap:menu.close">{{ item.label }}</a>
+    {% endfor %}
+  </nav>
+  <a class="btn btn-gold js-register" href="{{ site.links.register }}" on="tap:menu.close">{{ ui.registerFreeCredit }}</a>
+</amp-sidebar>

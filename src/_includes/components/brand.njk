@@ -1,0 +1,6 @@
+{% macro brand(label) -%}
+<a class="brand" href="#top" aria-label="{{ label }}">
+  {% include "components/logo.njk" %}
+  {% include "components/brand-name.njk" %}
+</a>
+{%- endmacro %}

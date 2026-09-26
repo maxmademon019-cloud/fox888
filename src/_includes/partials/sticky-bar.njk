@@ -1,0 +1,5 @@
+{% from "components/buttons.njk" import loginButton, registerButton with context %}
+<div class="sticky-bar" role="navigation" aria-label="{{ ui.stickyLabel }}">
+  {{ loginButton(ui.login, icon="login") }}
+  {{ registerButton(ui.register, icon="crown") }}
+</div>

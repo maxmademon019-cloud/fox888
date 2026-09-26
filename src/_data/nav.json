@@ -1,0 +1,8 @@
+[
+  { "id": "direct-link", "label": "ทางเข้า fox888", "short": "ทางเข้า", "toc": "กดลิงก์ตรง fox888 ทางเข้า รับเครดิตฟรี", "primary": true },
+  { "id": "cq9", "label": "สูตรสล็อต CQ9", "short": "สูตรสล็อต CQ9", "toc": "สูตรสล็อต CQ9 ล่าสุด", "primary": true },
+  { "id": "pro", "label": "วิธีทำเงินแบบมือโปร", "short": "วิธีทำเงิน", "toc": "วิธีทำเงินแบบมือโปร", "primary": false },
+  { "id": "promotion", "label": "โปรโมชั่น", "short": "โปรโมชั่น", "toc": "โปรโมชั่นจัดเต็ม", "primary": true },
+  { "id": "register", "label": "สมัครสมาชิก", "short": "สมัครสมาชิก", "toc": "สมัครสมาชิก 24 ชั่วโมง", "primary": false },
+  { "id": "faq", "label": "คำถามที่พบบ่อย", "short": "FAQ", "toc": "คำถามที่พบบ่อย", "primary": true }
+]

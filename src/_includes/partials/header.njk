@@ -1,0 +1,18 @@
+{% from "components/brand.njk" import brand with context %}
+{% from "components/buttons.njk" import loginButton, registerButton with context %}
+<header class="site-header">
+  <div class="container header-inner">
+    {{ brand(ui.home) }}
+    <nav class="nav-desktop" aria-label="{{ ui.mainNav }}">
+      {% for item in nav | selectattr("primary") %}
+        <a href="#{{ item.id }}">{{ item.short }}</a>
+      {% endfor %}
+    </nav>
+    <div class="header-actions">
+      {{ loginButton(ui.login, size="sm") }}
+      {{ registerButton(ui.registerNow, size="sm") }}
+      <button class="menu-btn" on="tap:menu.toggle" aria-label="{{ ui.openMenu }}">{% include "icons/menu.svg" %}</button>
+    </div>
+  </div>
+  {% include "partials/ticker.njk" %}
+</header>

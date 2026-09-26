@@ -1,0 +1,31 @@
+.sticky-bar {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 50;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  padding: 10px 12px calc(10px + env(safe-area-inset-bottom));
+  background: linear-gradient(180deg, rgba(10, 15, 38, .92), rgba(6, 9, 20, .98));
+  border-top: 1px solid var(--line-gold);
+  box-shadow: 0 -12px 30px rgba(0, 0, 0, .45);
+}
+
+.sticky-bar .btn { min-height: 52px; font-size: 17px; }
+
+@media (min-width: 900px) {
+  .sticky-bar {
+    left: 50%;
+    right: auto;
+    bottom: 18px;
+    width: 520px;
+    padding: 8px;
+    border: 1px solid var(--line-gold);
+    border-radius: 22px;
+    transform: translateX(-50%);
+  }
+
+  .sticky-bar .btn { min-height: 48px; }
+}

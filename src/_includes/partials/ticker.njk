@@ -1,0 +1,9 @@
+<div class="ticker" aria-hidden="true">
+  <div class="ticker-track">
+    {% for pass in [1, 2] %}
+      {% for message in landing.ticker %}
+        <span>{{ message }}</span>
+      {% endfor %}
+    {% endfor %}
+  </div>
+</div>

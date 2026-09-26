@@ -1,0 +1,16 @@
+{% from "components/buttons.njk" import registerButton with context %}
+<aside class="aside" aria-label="{{ ui.asideLabel }}">
+  <nav class="card toc" aria-label="{{ ui.toc }}">
+    <p class="card-title toc-title">{{ ui.toc }}</p>
+    <ol>
+      {% for item in nav %}
+        <li><a href="#{{ item.id }}">{{ item.toc }}</a></li>
+      {% endfor %}
+    </ol>
+  </nav>
+  <div class="card aside-cta">
+    {% include "components/logo.njk" %}
+    <p>{{ ui.asideCta }}</p>
+    {{ registerButton(ui.register) }}
+  </div>
+</aside>

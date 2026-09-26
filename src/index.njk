@@ -1,0 +1,26 @@
+---
+layout: base.njk
+permalink: /index.html
+---
+{% include "partials/analytics.njk" %}
+{% include "partials/sidebar.njk" %}
+{% include "partials/header.njk" %}
+
+<main>
+  {% include "partials/hero.njk" %}
+  {% include "partials/highlights.njk" %}
+
+  <div class="container layout">
+    <article class="content">
+      {% include "partials/intro.njk" %}
+      {% for section in landing.sections %}
+        {% include "partials/section.njk" %}
+      {% endfor %}
+      {% include "partials/faq.njk" %}
+    </article>
+    {% include "partials/aside.njk" %}
+  </div>
+</main>
+
+{% include "partials/footer.njk" %}
+{% include "partials/sticky-bar.njk" %}

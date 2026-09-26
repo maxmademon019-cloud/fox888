@@ -1,0 +1,13 @@
+{% from "components/brand.njk" import brand with context %}
+<footer class="site-footer">
+  <div class="container footer-inner">
+    {{ brand(ui.backToTop) }}
+    <nav class="footer-nav" aria-label="{{ ui.footerNav }}">
+      {% for item in nav %}
+        <a href="#{{ item.id }}">{{ item.short }}</a>
+      {% endfor %}
+    </nav>
+    <p class="footer-note"><span class="age-badge">{{ ui.ageBadge }}</span>{{ ui.ageNotice }}</p>
+    <p class="footer-note">© {{ build.year }} {{ site.name }} · {{ site.alternateName }}</p>
+  </div>
+</footer>

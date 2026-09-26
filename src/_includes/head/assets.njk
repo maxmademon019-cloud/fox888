@@ -1,0 +1,8 @@
+<link rel="preconnect" href="https://ik.imagekit.io">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="image" href="{{ site.heroImage.src }}">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&amp;display=swap">
+<script async src="https://cdn.ampproject.org/v0.js"></script>
+{%- for component in ["amp-analytics", "amp-accordion", "amp-sidebar"] %}
+<script async custom-element="{{ component }}" src="https://cdn.ampproject.org/v0/{{ component }}-0.1.js"></script>
+{%- endfor %}
