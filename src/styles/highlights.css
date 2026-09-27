@@ -27,7 +27,7 @@
 
 .highlight strong { display: block; font-size: 18px; line-height: 1.2; color: var(--gold-light); }
 
-.highlight span { display: block; font-size: 13px; line-height: 1.4; color: var(--muted); }
+.highlight > div > span { display: block; font-size: 13px; line-height: 1.4; color: var(--muted); }
 
 @media (min-width: 900px) {
   .highlights { grid-template-columns: repeat(4, 1fr); gap: 14px; }
